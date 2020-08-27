@@ -47,5 +47,4 @@ abstract class Statistics {
     abstract double variance(double[] vec);
     abstract double variationCoeficient(double[] vec);
     abstract double median(double[] vec);
-    abstract double modalValue(double[] vec);
 }
