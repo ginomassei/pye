@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="Fixed method cumulativeFrequence on Statistics">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="GitIgnore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/PopulationStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/PopulationStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598542114647</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="GitIgnore">
+      <created>1598542236428</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598542236428</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -193,19 +202,20 @@
     <MESSAGE value="Abstract classes added." />
     <MESSAGE value="Done" />
     <MESSAGE value="Updated PopulationStatistics class" />
-    <MESSAGE value="GitIgnore" />
     <MESSAGE value="Fixed method cumulativeFrequence on Statistics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed method cumulativeFrequence on Statistics" />
+    <MESSAGE value="GitIgnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="GitIgnore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598533163489">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598533163489" />
-    <state x="653" y="238" key="#com.intellij.ide.util.MemberChooser" timestamp="1598538904254">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="995" y="326" key="#com.intellij.ide.util.MemberChooser" timestamp="1598555995122">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="653" y="238" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1598538904254" />
+    <state x="995" y="326" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1598555995122" />
     <state x="376" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598535126157">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -259,10 +269,10 @@
     </state>
     <state x="497" y="231" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1598533424036" />
     <state x="781" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1598489033914" />
-    <state x="578" y="335" key="Vcs.Push.Dialog.v2" timestamp="1598542155093">
+    <state x="578" y="335" key="Vcs.Push.Dialog.v2" timestamp="1598542240156">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="335" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1598542155093" />
+    <state x="578" y="335" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1598542240156" />
     <state x="880" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598489320007" />
     <state x="381" y="268" width="918" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598534005975">
       <screen x="0" y="0" width="1680" height="1050" />

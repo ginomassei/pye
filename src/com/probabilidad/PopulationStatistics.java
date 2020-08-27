@@ -32,14 +32,14 @@ class PopulationStatistics extends Statistics {
         return 0;
     }
 
-    double modalValue(double[] vec) {
-        return 0;
+    double[] modalValue(double[] classMarks) {
+        return classMarks;
     }
 
     double[] absoluteFrequence(double[] intervalsBottom, double[] intervalsTop, double[] obs) {
         double[] ni = new double[Array.getLength(intervalsBottom)];
 
-        for (int i = 0; i < Array.getLength(ni); i++){
+        for (int i = 0; i < Array.getLength(ni); i++) {
             for (double k : obs) {
                 if ((k >= intervalsBottom[i]) && (k < intervalsTop[i])) {
                     ni[i]++;
@@ -47,6 +47,16 @@ class PopulationStatistics extends Statistics {
             }
         }
         return ni;
+    }
+
+    double[] classMarks(double[] intervalsTop, double[] intervalsBottom) {
+        int n = Array.getLength(intervalsBottom);
+        double[] classMark = new double[n];  // Marcas de clase.
+
+        for (int i = 0; i < n; i++) {
+            classMark[i] = (intervalsBottom[i] + intervalsTop[i]) / 2;
+        }
+        return classMark;
     }
 
     Object[] intervalMaker(double[] yi, int intervalsNumber) {
@@ -75,15 +85,10 @@ class PopulationStatistics extends Statistics {
             intervalsTop[i] = lower;
         }
 
-        double[] classMarks = new double[intervalsNumber];  // Marcas de clase.
-        for (int i = 0; i < intervalsNumber; i++) {
-            classMarks[i] = (intervalsBottom[i] + intervalsTop[i]) / 2;
-        }
-
         double[] classes = new double[intervalsNumber];  // Class number.
         for (int i = 0; i < intervalsNumber; i++) {
             classes[i] = i + 1;
         }
-        return new Object[]{intervalsBottom, intervalsTop, classMarks, classes};
+        return new Object[]{intervalsBottom, intervalsTop, classes};
     }
 }
