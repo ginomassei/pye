@@ -15,7 +15,6 @@ abstract class Statistics {
         for (int i = 0; i < n; i++) {
             hi[i] = ni[i] / ac;
         }
-
         return hi;
     }
 
