@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 
 abstract class Statistics {
     // None abstract methods.
-    public double[] relativeFrequence(double[] ni) {
+    double[] relativeFrequence(double[] ni) {
         int n = Array.getLength(ni);
         double[] hi = new double[n];
         int ac = 0;
@@ -19,7 +19,7 @@ abstract class Statistics {
         return hi;
     }
 
-    public double[] cumulativeFrequence(double[] vec) {
+    double[] cumulativeFrequence(double[] vec) {
         int n = Array.getLength(vec);
         double[] cf = new double[n];
 
@@ -27,7 +27,7 @@ abstract class Statistics {
         return cf;
     }
 
-    public double mean(double[] vec) {
+    double mean(double[] vec) {
         double sum = 0;
         int n = Array.getLength(vec);
 
@@ -38,10 +38,9 @@ abstract class Statistics {
     }
 
     // Abstract methods.
-    public abstract double[] absoluteFrequence();
-    public abstract double standardDeviation(double[] vec);
-    public abstract double variance(double[] vec);
-    public abstract double variationCoeficient(double[] vec);
-    public abstract double median(double[] vec);
-    public abstract double modalValue(double[] vec);
+    abstract double standardDeviation(double[] vec);
+    abstract double variance(double[] vec);
+    abstract double variationCoeficient(double[] vec);
+    abstract double median(double[] vec);
+    abstract double modalValue(double[] vec);
 }
