@@ -19,9 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="Updated PopulationStatistics class">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="GitIgnore">
+      <change beforePath="$PROJECT_DIR$/pye.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pye.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/StatisticsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/StatisticsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598541450634</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="GitIgnore">
+      <created>1598541567117</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1598541567117</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -180,7 +189,8 @@
     <MESSAGE value="Abstract classes added." />
     <MESSAGE value="Done" />
     <MESSAGE value="Updated PopulationStatistics class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated PopulationStatistics class" />
+    <MESSAGE value="GitIgnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="GitIgnore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598533163489">
@@ -207,31 +217,31 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="1128" y="422" key="Github.UntrackedFilesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1598488990649" />
-    <state width="1638" height="186" key="GridCell.Tab.0.bottom" timestamp="1598537094747">
+    <state width="1638" height="186" key="GridCell.Tab.0.bottom" timestamp="1598541832261">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="186" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1598537094747" />
-    <state width="1638" height="186" key="GridCell.Tab.0.center" timestamp="1598537094746">
+    <state width="1638" height="186" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1598541832261" />
+    <state width="1638" height="186" key="GridCell.Tab.0.center" timestamp="1598541832260">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="186" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1598537094746" />
-    <state width="1638" height="186" key="GridCell.Tab.0.left" timestamp="1598537094745">
+    <state width="1638" height="186" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1598541832260" />
+    <state width="1638" height="186" key="GridCell.Tab.0.left" timestamp="1598541832259">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="186" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1598537094745" />
-    <state width="1638" height="186" key="GridCell.Tab.0.right" timestamp="1598537094746">
+    <state width="1638" height="186" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1598541832259" />
+    <state width="1638" height="186" key="GridCell.Tab.0.right" timestamp="1598541832260">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="186" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1598537094746" />
+    <state width="1638" height="186" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1598541832260" />
     <state x="497" y="231" key="SettingsEditor" timestamp="1598533424036">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="497" y="231" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1598533424036" />
     <state x="781" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1598489033914" />
-    <state x="578" y="335" key="Vcs.Push.Dialog.v2" timestamp="1598540923638">
+    <state x="578" y="335" key="Vcs.Push.Dialog.v2" timestamp="1598541613613">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="335" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1598540923638" />
+    <state x="578" y="335" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1598541613613" />
     <state x="880" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598489320007" />
     <state x="381" y="268" width="918" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598534005975">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -249,6 +259,11 @@
           <properties class="java.lang.ClassCastException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/probabilidad/StatisticsTest.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

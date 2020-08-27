@@ -22,7 +22,13 @@ abstract class Statistics {
         int n = Array.getLength(vec);
         double[] cf = new double[n];
 
-        for (int i = 0; i < n; i++) cf[i] = vec[i] + cf[i - 1];
+        for (int i = 0; i < n; i++) {
+            if (i == 0){
+                cf[i] = vec[i] + cf[i];
+            } else {
+                cf[i] = vec[i] + cf[i - 1];
+            }
+        }
         return cf;
     }
 

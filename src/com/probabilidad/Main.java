@@ -31,6 +31,9 @@ public class Main {
         double[] hi = statisticsTest.relativeFrequence(ni);
         System.out.println(Arrays.toString(hi));
 
+        double[] cf = statisticsTest.cumulativeFrequence(ni);
+        System.out.println(Arrays.toString(cf));
+
 //        double avg = statistics.mean(obs);
 //        System.out.println("Mean: " + avg);
 //
