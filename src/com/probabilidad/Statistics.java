@@ -38,12 +38,9 @@ public class Statistics {
         int n = Array.getLength(vec);
         double[] cf = new double[n];
 
-        for (int i = 0; i < n; i++) {
-            cf[i] = vec[i] + cf[i-1];
-        }
+        for (int i = 0; i < n; i++) cf[i] = vec[i] + cf[i - 1];
         return cf;
     }
-
 
     Object[] intervalMaker(double[] yi, int intervalsNumber) {
         int n = Array.getLength(yi);
@@ -61,22 +58,22 @@ public class Statistics {
             lower = lower - (diff / 2);
         }
 
-        int[] intervalsTop = new int[intervalsNumber];  // Vector que contiene los límites superiores de cada clase.
-        int[] intervalsBottom = new int[intervalsNumber]; // Vector que contiene los límites inferiores de cada clase.
+        double[] intervalsTop = new double[intervalsNumber];  // Vector que contiene los límites superiores de cada clase.
+        double[] intervalsBottom = new double[intervalsNumber]; // Vector que contiene los límites inferiores de cada clase.
 
         for (int i = 0; i < intervalsNumber; i++) {
-            intervalsBottom[i] = (int) lower;
+            intervalsBottom[i] = lower;
 
             lower = (int) lower + (int) ci;
-            intervalsTop[i] = (int) lower;
+            intervalsTop[i] = lower;
         }
 
-        int[] classMarks = new int[intervalsNumber];  // Marcas de clase.
+        double[] classMarks = new double[intervalsNumber];  // Marcas de clase.
         for (int i = 0; i < intervalsNumber; i++) {
             classMarks[i] = (intervalsBottom[i] + intervalsTop[i]) / 2;
         }
 
-        int[] classes = new int[intervalsNumber];  // Class number.
+        double[] classes = new double[intervalsNumber];  // Class number.
         for (int i = 0; i < intervalsNumber; i++) {
             classes[i] = i + 1;
         }
@@ -90,9 +87,7 @@ public class Statistics {
         for (double i : vec) {
             sum += i;
         }
-
-        double avg = sum / n;
-        return avg;
+        return sum / n;
     }
 
     double listFrequenceAverage(double[] vec, double[] hi) {
@@ -108,12 +103,12 @@ public class Statistics {
 
     double sampleStandardDeviation(double[] vec) {
         double var = sampleVariance(vec);
-        return (double) Math.sqrt(var);
+        return Math.sqrt(var);
     }
 
     double populationStandardDeviation(double[] vec) {
         double var = populationVariance(vec);
-        return (double) Math.sqrt(var);
+        return Math.sqrt(var);
     }
 
     double sampleVariance(double[] vec) {
@@ -125,8 +120,7 @@ public class Statistics {
         for (int i = 0; i < n; i++) {
             sqDiff += (vec[i] - avg) * (vec[i] - avg);
         }
-        double var = (double) (sqDiff / (n - 1));
-        return var;
+        return sqDiff / (n - 1);
     }
 
     double populationVariance(double[] vec) {
@@ -138,61 +132,46 @@ public class Statistics {
         for (int i = 0; i < n; i++) {
             sqDiff += (vec[i] - avg) * (vec[i] - avg);
         }
-        double var = (double) (sqDiff / (n));
-        return var;
+        return sqDiff / n;
     }
 
     double sampleVariationCoeficient(double[] vec) {
         double sd = sampleStandardDeviation(vec);
         double avg = mean(vec);
-
-        double vc = sd / avg;
-        return vc;
+        return sd / avg;
     }
 
     double populationVariationCoeficient(double[] vec) {
         double sd = populationStandardDeviation(vec);
         double avg = mean(vec);
-
-        double vc = sd / avg;
-        return vc;
+        return sd / avg;
     }
 
     double sampleMedian(double[] arr) {
         int n = Array.getLength(arr);
-        int median = 0;
-        double medianIndex = 0;
-        double medianEven = 0;
+        double medianEven;
 
         if (!arrays.sorted(arr)) {
             arrays.selectionSort(arr);
         }
 
         if (n % 2 != 0){
-            median = (n + 1) / 2;
+            int median = (n + 1) / 2;
             return arr[median];
 
         } else {
-            medianIndex = (double) (n + 1) / 2;
+            double medianIndex = (double) (n + 1) / 2;
             medianEven = (arr[(int) medianIndex - 1] + arr[(int) medianIndex]) / 2;
         }
         return medianEven;
     }
 
     double sampleModalValue(double[] arr) {
-        int[] count = new int[Array.getLength(arr)];
-
         if (!arrays.sorted(arr)) {
             arrays.selectionSort(arr);
         }
-
-        for (double i : arr) {
-            count[(int)i] ++;
-        }
-
         Object[] max = arrays.getMax(arr);
         int index = (int) max[1];
-
         return arr[index];
     }
 }
