@@ -2,10 +2,10 @@ package com.probabilidad;
 
 import java.lang.reflect.Array;
 
-public class Statistics {
+public class StatisticsTest {
     MyArrays arrays = new MyArrays();
 
-    double[] absoluteFrequence(double[] var, double[] obs) {
+    double[] sampleAbsoluteFrequence(double[] var, double[] obs) {
         int n = Array.getLength(var);
         double[] ni = new double[n];
         int j = 0;
@@ -13,6 +13,20 @@ public class Statistics {
         for (double i : var) {
             ni[j] = arrays.linearSearchInstances(obs, i);
             j++;
+        }
+
+        return ni;
+    }
+
+    double[] populationAbsoluteFrequence(double[] intervalsBottom, double[] intervalsTop, double[] obs) {
+        double[] ni = new double[Array.getLength(intervalsBottom)];
+
+        for (int i = 0; i < Array.getLength(ni); i++){
+            for (double k : obs) {
+                if ((k >= intervalsBottom[i]) && (k < intervalsTop[i])) {
+                    ni[i]++;
+                }
+            }
         }
 
         return ni;
