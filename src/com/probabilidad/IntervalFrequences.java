@@ -10,6 +10,8 @@ public class IntervalFrequences extends GroupDataStatistics {
     private double[] classMarks;
     private double[] absoluteFrequency;
     private double[] relativeFrequency;
+    private double[] cumulativeAbsoluteFrequency;
+    private double[] cumulativeRelativeFrequency;
     private double[] classNumber;
     private double variance;
     private double mean;
@@ -19,9 +21,9 @@ public class IntervalFrequences extends GroupDataStatistics {
     private double variationCoeficient;
 
     // Construct.
-    IntervalFrequences(double[] data, int intervalNumber) {
+    IntervalFrequences(double[] data, int intervalsNumber) {
         arrays.selectionSort(data);
-        Object[] values = setIntervals(data, intervalNumber);
+        Object[] values = setIntervals(data, intervalsNumber);
         this.intervalsBottom = (double[]) values[0];
         this.intervalsTop = (double[]) values[1];
         this.classNumber = (double[]) values[2];
@@ -34,6 +36,8 @@ public class IntervalFrequences extends GroupDataStatistics {
         this.modalValue = setModalValue(data);
         this.standardDeviation = setStandardDeviation(variance);
         this.variationCoeficient = setVariationCoeficient(standardDeviation, mean);
+        this.cumulativeAbsoluteFrequency = setCumulativeFrequency(absoluteFrequency);
+        this.cumulativeRelativeFrequency = setCumulativeFrequency(relativeFrequency);
     }
 
     // Methods.
@@ -41,10 +45,10 @@ public class IntervalFrequences extends GroupDataStatistics {
     protected double setMean(double[] arr) {
         // Returns the mean value of a given data series based on the class marks.
         int meanValue = 0;
-        int n = Array.getLength(arr);
+        int n = Array.getLength(classMarks);
 
         for (int i = 0; i < n; i++) {
-            meanValue += arr[i] * classMarks[i];
+            meanValue += relativeFrequency[i] * classMarks[i];
         }
         return meanValue;
     }
@@ -114,43 +118,51 @@ public class IntervalFrequences extends GroupDataStatistics {
     }
 
     // Getters.
-    Object[] getIntervals() {
+    public Object[] getIntervals() {
         return new Object[]{intervalsBottom, intervalsTop, classMarks};
     }
 
-    double[] getClassNumber() {
+    public double[] getClassNumber() {
         return classNumber;
     }
 
-    double[] getAbsoluteFrequency() {
+    public double[] getAbsoluteFrequency() {
         return absoluteFrequency;
     }
 
-    double[] getRelativeFrequency() {
+    public double[] getRelativeFrequency() {
         return relativeFrequency;
     }
 
-    double getVariance() {
+    public double getVariance() {
         return variance;
     }
 
-    double getMean() {
+    public double getMean() {
         return mean;
     }
 
-    double getMedian() {
+   public double getMedian() {
         return median;
     }
 
-    double getModalValue() {
+    public double getModalValue() {
         return modalValue;
     }
 
-    double getStandardDeviation() {
+    public double getStandardDeviation() {
         return standardDeviation;
     }
 
-    double getVariationCoeficient() {
+    public double getVariationCoeficient() {
         return variationCoeficient;
+    }
+
+    public double[] getCumulativeAbsoluteFrequency() {
+        return cumulativeAbsoluteFrequency;
+    }
+
+    public double[] getCumulativeRelativeFrequency() {
+        return cumulativeRelativeFrequency;
     }
 }

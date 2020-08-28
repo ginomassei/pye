@@ -7,6 +7,8 @@ public class ListFrequences extends GroupDataStatistics {
     // Atributes.
     private double[] absoluteFrequency;
     private double[] relativeFrequency;
+    private double[] cumulativeAbsoluteFrequency;
+    private double[] cumulativeRelativeFrequency;
     private double variance;
     private double mean;
     private double median;
@@ -26,6 +28,8 @@ public class ListFrequences extends GroupDataStatistics {
         this.modalValue = setModalValue(data);
         this.standardDeviation = setStandardDeviation(variance);
         this.variationCoeficient = setVariationCoeficient(standardDeviation, mean);
+        this.cumulativeAbsoluteFrequency = setCumulativeFrequency(absoluteFrequency);
+        this.cumulativeRelativeFrequency = setCumulativeFrequency(relativeFrequency);
     }
 
     // Methods.
@@ -62,35 +66,43 @@ public class ListFrequences extends GroupDataStatistics {
     }
 
     // Getters.
-    double[] getAbsoluteFrequency() {
+    public double[] getAbsoluteFrequency() {
         return absoluteFrequency;
     }
 
-    double[] getRelativeFrequency() {
+    public double[] getRelativeFrequency() {
         return relativeFrequency;
     }
 
-    double getVariance() {
+    public double getVariance() {
         return variance;
     }
 
-    double getMean() {
+   public double getMean() {
         return mean;
     }
 
-    double getMedian() {
+    public double getMedian() {
         return median;
     }
 
-    double getModalValue() {
+    public double getModalValue() {
         return modalValue;
     }
 
-    double getStandardDeviation() {
+    public double getStandardDeviation() {
         return standardDeviation;
     }
 
-    double getVariationCoeficient() {
+    public double getVariationCoeficient() {
         return variationCoeficient;
+    }
+
+    public double[] getCumulativeAbsoluteFrequency() {
+        return cumulativeAbsoluteFrequency;
+    }
+
+    public double[] getCumulativeRelativeFrequency() {
+        return cumulativeRelativeFrequency;
     }
 }

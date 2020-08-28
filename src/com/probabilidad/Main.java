@@ -1,16 +1,25 @@
 package com.probabilidad;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        double[] obs = {440, 555, 700, 440, 660, 440, 440, 440, 440, 555, 730, 660, 680, 730, 680, 440, 440, 730, 730, 680};
+        double[] obs = {300, 300, 350, 350, 450, 450, 500, 500, 550, 560, 600, 600, 650, 700, 750, 750, 850, 850,
+                900, 900, 950, 1000, 1000, 1000,
+                1100, 1200, 1200, 1250, 1300, 1400, 1500, 1500, 1600, 1650, 1800, 1900, 2000, 2000, 2500 ,3000  };
 
         // Objects definition.
         MyArrays arrays = new MyArrays();
-        SimpleDataSeriesStatistics listStatistics = new SimpleDataSeriesStatistics(obs);
+        IntervalFrequences Statistics = new IntervalFrequences(obs, 7);
 
-        System.out.println(listStatistics.getMean());
-        System.out.println(listStatistics.getStandardDeviation());
-        System.out.println(listStatistics.getVariance());
-        System.out.println(listStatistics.getVariationCoeficient());
+        Object[] data = Statistics.getIntervals();
+        System.out.println(Arrays.toString((double[]) data[0]));
+        System.out.println(Arrays.toString((double[]) data[1]));
+        System.out.println(Arrays.toString((double[]) data[2]));
+
+        System.out.println(Arrays.toString(Statistics.getAbsoluteFrequency()));
+        System.out.println(Arrays.toString(Statistics.getRelativeFrequency()));
+        System.out.println(Arrays.toString(Statistics.getCumulativeAbsoluteFrequency()));
+        System.out.println(Arrays.toString(Statistics.getCumulativeRelativeFrequency()));
     }
 }
