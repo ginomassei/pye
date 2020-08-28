@@ -11,15 +11,21 @@ public class SimpleDataSeriesStatistics extends Statistics {
     private double modalValue;
     private double standardDeviation;
     private double variationCoeficient;
+    private double maxValue;
+    private double minValue;
 
     // Construct.
     SimpleDataSeriesStatistics(double[] data) {
-        this.variance = setVariance(data);
+        arrays.selectionSort(data);
         this.mean = setMean(data);
+        this.variance = setVariance(data);
         this.median = setMedian(data);
         this.modalValue = setModalValue(data);
         this.standardDeviation = setStandardDeviation(variance);
         this.variationCoeficient = setVariationCoeficient(standardDeviation, mean);
+        Object[] max = arrays.getMax(data);
+        this.maxValue = (double) max[0];
+        this.minValue = arrays.getMin(data);
     }
 
     // Methods.
@@ -84,5 +90,35 @@ public class SimpleDataSeriesStatistics extends Statistics {
     }
 
     // Getters.
+    public double getVariance() {
+        return variance;
+    }
 
+    public double getMean() {
+        return mean;
+    }
+
+    public double getMedian() {
+        return median;
+    }
+
+    public double getModalValue() {
+        return modalValue;
+    }
+
+    public double getStandardDeviation() {
+        return standardDeviation;
+    }
+
+    public double getVariationCoeficient() {
+        return variationCoeficient * 100;
+    }
+
+    public double getMaxValue() {
+        return maxValue;
+    }
+
+    public double getMinValue() {
+        return minValue;
+    }
 }

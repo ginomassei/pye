@@ -20,6 +20,7 @@ public class IntervalFrequences extends GroupDataStatistics {
 
     // Construct.
     IntervalFrequences(double[] data, int intervalNumber) {
+        arrays.selectionSort(data);
         Object[] values = setIntervals(data, intervalNumber);
         this.intervalsBottom = (double[]) values[0];
         this.intervalsTop = (double[]) values[1];
@@ -27,8 +28,8 @@ public class IntervalFrequences extends GroupDataStatistics {
         this.classMarks = setClassMarks(intervalsTop, intervalsBottom);
         this.absoluteFrequency = setAbsoluteFrequency(intervalsBottom, intervalsTop, data);
         this.relativeFrequency = setRelativeFrequency(absoluteFrequency);
-        this.variance = setVariance(data);
         this.mean = setMean(data);
+        this.variance = setVariance(data);
         this.median = setMedian(data);
         this.modalValue = setModalValue(data);
         this.standardDeviation = setStandardDeviation(variance);
@@ -113,4 +114,43 @@ public class IntervalFrequences extends GroupDataStatistics {
     }
 
     // Getters.
+    Object[] getIntervals() {
+        return new Object[]{intervalsBottom, intervalsTop, classMarks};
+    }
+
+    double[] getClassNumber() {
+        return classNumber;
+    }
+
+    double[] getAbsoluteFrequency() {
+        return absoluteFrequency;
+    }
+
+    double[] getRelativeFrequency() {
+        return relativeFrequency;
+    }
+
+    double getVariance() {
+        return variance;
+    }
+
+    double getMean() {
+        return mean;
+    }
+
+    double getMedian() {
+        return median;
+    }
+
+    double getModalValue() {
+        return modalValue;
+    }
+
+    double getStandardDeviation() {
+        return standardDeviation;
+    }
+
+    double getVariationCoeficient() {
+        return variationCoeficient;
+    }
 }

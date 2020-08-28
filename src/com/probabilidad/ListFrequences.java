@@ -16,10 +16,12 @@ public class ListFrequences extends GroupDataStatistics {
 
     // Construct.
     ListFrequences(double[] data, double[] variables) {
+        arrays.selectionSort(data);
+        arrays.selectionSort(variables);
         this.absoluteFrequency = setAbsoluteFrequency(variables, data);
         this.relativeFrequency = setRelativeFrequency(absoluteFrequency);
-        this.variance = setVariance(data);
         this.mean = setMean(data);
+        this.variance = setVariance(data);
         this.median = setMedian(data);
         this.modalValue = setModalValue(data);
         this.standardDeviation = setStandardDeviation(variance);
@@ -82,5 +84,13 @@ public class ListFrequences extends GroupDataStatistics {
 
     double getModalValue() {
         return modalValue;
+    }
+
+    double getStandardDeviation() {
+        return standardDeviation;
+    }
+
+    double getVariationCoeficient() {
+        return variationCoeficient;
     }
 }
