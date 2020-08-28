@@ -1,5 +1,6 @@
 package com.probabilidad;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
@@ -57,5 +58,18 @@ public class Main {
 //
 //        double modal = statistics.sampleModalValue(obs);
 //        System.out.println("Valor modal: " + modal);
+
+
+//        double[] absoluteFrequency(double[] var, double[] obs) {
+//            int n = Array.getLength(var);
+//            double[] ni = new double[n];
+//            int j = 0;
+//
+//            for (double i : var) {
+//                ni[j] = arrays.linearSearchInstances(obs, i);
+//                j++;
+//            }
+//            return ni;
+//        }
     }
 }

@@ -19,10 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="GitIgnore">
+    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="Implemented modal value method.">
+      <change afterPath="$PROJECT_DIR$/src/com/probabilidad/GroupDataStatistics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/probabilidad/IntervalFrequences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/probabilidad/ListFrequences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/probabilidad/SimpleDataSeriesStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/PopulationStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/PopulationStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/PopulationStatistics.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/SampleStatistics.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/StatisticsTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +176,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598542236428</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Removed abstract methods.">
+      <created>1598556940866</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1598556940866</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Implemented modal value method.">
+      <created>1598556969925</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598556969925</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -204,22 +226,33 @@
     <MESSAGE value="Updated PopulationStatistics class" />
     <MESSAGE value="Fixed method cumulativeFrequence on Statistics" />
     <MESSAGE value="GitIgnore" />
-    <option name="LAST_COMMIT_MESSAGE" value="GitIgnore" />
+    <MESSAGE value="Removed abstract methods." />
+    <MESSAGE value="Implemented modal value method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented modal value method." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1646" y="562" key="#Notifications" timestamp="1598571516464">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1646" y="562" key="#Notifications/0.23.2560.1417@0.23.2560.1417" timestamp="1598571516464" />
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598533163489">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598533163489" />
-    <state x="995" y="326" key="#com.intellij.ide.util.MemberChooser" timestamp="1598555995122">
-      <screen x="0" y="0" width="2560" height="1440" />
+    <state x="995" y="344" key="#com.intellij.ide.util.MemberChooser" timestamp="1598577433880">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="653" y="238" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1598538904254" />
     <state x="995" y="326" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1598555995122" />
+    <state x="995" y="344" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1598577433880" />
     <state x="376" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598535126157">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="376" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598535126157" />
+    <state x="1658" y="485" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598577603794">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1658" y="485" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.2560.1417@0.23.2560.1417" timestamp="1598577603794" />
     <state x="586" y="387" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1598539859215">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -269,11 +302,12 @@
     </state>
     <state x="497" y="231" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1598533424036" />
     <state x="781" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1598489033914" />
-    <state x="578" y="335" key="Vcs.Push.Dialog.v2" timestamp="1598542240156">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="880" y="476" key="Vcs.Push.Dialog.v2" timestamp="1598577657251">
+      <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="578" y="335" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1598542240156" />
-    <state x="880" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598489320007" />
+    <state x="880" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598556979861" />
+    <state x="880" y="476" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1598577657251" />
     <state x="381" y="268" width="918" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598534005975">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -282,6 +316,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="0" y="23" width="1638" height="1027" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1598529246265" />
+    <state x="1608" y="23" width="952" height="1398" key="dock-window-2" timestamp="1598573495375">
+      <screen x="0" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1608" y="23" width="952" height="1398" key="dock-window-2/0.23.2560.1417@0.23.2560.1417" timestamp="1598573495375" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

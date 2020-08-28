@@ -1,10 +1,17 @@
 package com.probabilidad;
-
 import java.lang.reflect.Array;
 
+/**
+ * This class implements statisticals operations
+ * */
+
 abstract class Statistics {
-    // None abstract methods.
-    double[] relativeFrequence(double[] ni) {
+    // Implements the array class.
+    MyArrays arrays = new MyArrays();
+    // Method definitions.
+    double[] relativeFrequency(double[] ni) {
+        // Calculates the relative frequency of a given absolute frequency array.
+        // Retunrs an array with the relative frequency.
         int n = Array.getLength(ni);
         double[] hi = new double[n];
         int ac = 0;
@@ -18,7 +25,8 @@ abstract class Statistics {
         return hi;
     }
 
-    double[] cumulativeFrequence(double[] vec) {
+    double[] cumulativeFrequency(double[] vec) {
+        // Returns the cumulative frequency of a given array.
         int n = Array.getLength(vec);
         double[] cf = new double[n];
 
@@ -32,19 +40,11 @@ abstract class Statistics {
         return cf;
     }
 
-    double mean(double[] vec) {
-        double sum = 0;
-        int n = Array.getLength(vec);
-
-        for (double i : vec) {
-            sum += i;
-        }
-        return sum / n;
-    }
-
-    // Abstract methods.
-    abstract double standardDeviation(double[] vec);
+    // Abstract methods definitions.
+    abstract double mean(double[] arr);
+    abstract double median(double[] arr);
     abstract double variance(double[] vec);
+    abstract double modalValue(double[] vec);
+    abstract double standardDeviation(double[] vec);
     abstract double variationCoeficient(double[] vec);
-    abstract double median(double[] vec);
 }
