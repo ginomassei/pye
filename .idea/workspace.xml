@@ -19,11 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="Overall refactor.">
+    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="Added atributes to all classes.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/probabilidad/GroupDataStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/GroupDataStatistics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/probabilidad/IntervalFrequences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/IntervalFrequences.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/probabilidad/ListFrequences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/ListFrequences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/probabilidad/SimpleDataSeriesStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/SimpleDataSeriesStatistics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" afterDir="false" />
     </list>
@@ -192,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598577681079</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added atributes to all classes.">
+      <created>1598578815206</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1598578815206</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -231,7 +238,8 @@
     <MESSAGE value="Removed abstract methods." />
     <MESSAGE value="Implemented modal value method." />
     <MESSAGE value="Overall refactor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Overall refactor." />
+    <MESSAGE value="Added atributes to all classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added atributes to all classes." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1646" y="562" key="#Notifications" timestamp="1598571516464">
@@ -242,11 +250,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598533163489" />
-    <state x="995" y="344" key="#com.intellij.ide.util.MemberChooser" timestamp="1598577966490">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state x="995" y="326" key="#com.intellij.ide.util.MemberChooser" timestamp="1598620747716">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="653" y="238" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1598538904254" />
-    <state x="995" y="326" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1598555995122" />
+    <state x="995" y="326" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1598620747716" />
     <state x="995" y="344" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1417@0.23.2560.1417" timestamp="1598577966490" />
     <state x="376" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598535126157">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -305,11 +313,11 @@
     </state>
     <state x="497" y="231" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1598533424036" />
     <state x="781" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1598489033914" />
-    <state x="880" y="476" key="Vcs.Push.Dialog.v2" timestamp="1598577687896">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state x="880" y="460" key="Vcs.Push.Dialog.v2" timestamp="1598578819374">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="578" y="335" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1598542240156" />
-    <state x="880" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598556979861" />
+    <state x="880" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598578819374" />
     <state x="880" y="476" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1598577687896" />
     <state x="381" y="268" width="918" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598534005975">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -323,6 +331,10 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1608" y="23" width="952" height="1398" key="dock-window-2/0.23.2560.1417@0.23.2560.1417" timestamp="1598573495375" />
+    <state x="943" y="329" width="672" height="678" key="search.everywhere.popup" timestamp="1598619636670">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="943" y="329" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440@0.0.2560.1440" timestamp="1598619636670" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -5,8 +5,6 @@ import java.lang.reflect.Array;
 public class ListFrequences extends GroupDataStatistics {
 
     // Atributes.
-    double[] data;
-    double[] variables;
     double[] absoluteFrequency;
     double[] relativeFrequency;
     double variance;
@@ -16,27 +14,39 @@ public class ListFrequences extends GroupDataStatistics {
     double standardDeviation;
     double variationCoeficient;
 
+    // Construct.
+    ListFrequences(double[] data, double[] variables) {
+        this.absoluteFrequency = setAbsoluteFrequency(variables, data);
+        this.relativeFrequency = setRelativeFrequency(absoluteFrequency);
+        this.variance = setVariance(data);
+        this.mean = setMean(data);
+        this.median = setMedian(data);
+        this.modalValue = setModalValue(data);
+        this.standardDeviation = setStandardDeviation(variance);
+        this.variationCoeficient = setVariationCoeficient(standardDeviation, mean);
+    }
+
     // Methods.
-    double mean(double[] arr) {
+    double setMean(double[] arr) {
         // Returns the mean value of a given data series based on the relative frequencies.
         int meanValue = 0;
         int n = Array.getLength(arr);
 
         for (int i = 0; i < n; i++) {
-            meanValue += arr[i] * hi[i];
+            meanValue += arr[i] * relativeFrequency[i];
         }
         return meanValue;
     }
 
-    double median(double[] arr) {
+    double setMedian(double[] arr) {
         return 0;
     }
 
-    double modalValue(double[] arr) {
+    double setModalValue(double[] arr) {
         return 0;
     }
 
-    double[] absoluteFrequency(double[] var, double[] data) {
+    double[] setAbsoluteFrequency(double[] var, double[] data) {
         int n = Array.getLength(var);
         double[] ni = new double[n];
         int j = 0;

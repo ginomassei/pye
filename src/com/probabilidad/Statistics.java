@@ -9,7 +9,7 @@ abstract class Statistics {
     // Implements the array class.
     MyArrays arrays = new MyArrays();
     // Method definitions.
-    double[] relativeFrequency(double[] ni) {
+    double[] setRelativeFrequency(double[] ni) {
         // Calculates the relative frequency of a given absolute frequency array.
         // Retunrs an array with the relative frequency.
         int n = Array.getLength(ni);
@@ -25,7 +25,7 @@ abstract class Statistics {
         return hi;
     }
 
-    double[] cumulativeFrequency(double[] arr) {
+    double[] setCumulativeFrequency(double[] arr) {
         // Returns the cumulative frequency of a given array.
         int n = Array.getLength(arr);
         double[] cf = new double[n];
@@ -41,10 +41,10 @@ abstract class Statistics {
     }
 
     // Abstract methods definitions.
-    abstract double mean(double[] arr);
-    abstract double median(double[] arr);
-    abstract double variance(double[] arr);
-    abstract double modalValue(double[] arr);
-    abstract double standardDeviation(double[] arr);
-    abstract double variationCoeficient(double[] arr);
+    abstract double setMean(double[] arr);
+    abstract double setMedian(double[] arr);
+    abstract double setVariance(double[] arr);
+    abstract double setModalValue(double[] arr);
+    abstract double setStandardDeviation(double variance);
+    abstract double setVariationCoeficient(double standardDeviation, double mean);
 }

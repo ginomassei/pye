@@ -2,9 +2,9 @@ package com.probabilidad;
 import java.lang.reflect.Array;
 
 abstract class GroupDataStatistics extends Statistics {
-    double variance(double[] arr) {
+    double setVariance(double[] arr) {
         int n = Array.getLength(arr);
-        double avg = mean(arr); // Obtengo la media de los datos.
+        double avg = setMean(arr); // Obtengo la media de los datos.
         double sqDiff = 0;
 
         for (int i = 0; i < n; i++) {
@@ -13,18 +13,15 @@ abstract class GroupDataStatistics extends Statistics {
         return sqDiff / n;
     }
 
-    double standardDeviation(double[] arr) {
-        double var = variance(arr);
-        return Math.sqrt(var);
+    double setStandardDeviation(double variance) {
+        return Math.sqrt(variance);
     }
 
-    double variationCoeficient(double[] arr) {
-        double sd = standardDeviation(arr);
-        double avg = mean(arr);
-        return sd / avg;
+    double setVariationCoeficient(double standardDeviation, double mean) {
+        return standardDeviation / mean;
     }
 
     // Abstract methods definition.
-    abstract double median(double[] arr);
-    abstract double modalValue(double[] arr);
+    abstract double setMedian(double[] arr);
+    abstract double setModalValue(double[] arr);
 }

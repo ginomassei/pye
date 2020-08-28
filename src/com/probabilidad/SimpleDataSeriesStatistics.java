@@ -5,18 +5,25 @@ import java.lang.reflect.Array;
 public class SimpleDataSeriesStatistics extends Statistics {
 
     // Atributes.
-    double[] data;
-    double[] absoluteFrequency;
-    double[] relativeFrequency;
-    double variance;
-    double mean;
-    double median;
-    double modalValue;
-    double standardDeviation;
-    double variationCoeficient;
+    private double variance;
+    private double mean;
+    private double median;
+    private double modalValue;
+    private double standardDeviation;
+    private double variationCoeficient;
+
+    // Construct.
+    SimpleDataSeriesStatistics(double[] data) {
+        this.variance = setVariance(data);
+        this.mean = setMean(data);
+        this.median = setMedian(data);
+        this.modalValue = setModalValue(data);
+        this.standardDeviation = setStandardDeviation(variance);
+        this.variationCoeficient = setVariationCoeficient(standardDeviation, mean);
+    }
 
     // Methods.
-    double mean(double[] vec) {
+    double setMean(double[] vec) {
         // Returns the mean value of a given data series array.
         double sum = 0;
         int n = Array.getLength(vec);
@@ -27,7 +34,7 @@ public class SimpleDataSeriesStatistics extends Statistics {
         return sum / n;
     }
 
-    double median(double[] vec) {
+    double setMedian(double[] vec) {
         // Returns the median value of a data series array.
         int n = Array.getLength(vec);
         double medianEven;
@@ -47,20 +54,18 @@ public class SimpleDataSeriesStatistics extends Statistics {
         return medianEven;
     }
 
-    double variance(double[] vec) {
+    double setVariance(double[] vec) {
         // Returns the variance value of a data series array.
         int n = Array.getLength(vec);
-        double avg = mean(vec);
-
         double sqDiff = 0;
 
         for (int i = 0; i < n; i++) {
-            sqDiff += (vec[i] - avg) * (vec[i] - avg);
+            sqDiff += (vec[i] - mean) * (vec[i] - mean);
         }
         return sqDiff / (n - 1);
     }
 
-    double modalValue(double[] vec) {
+    double setModalValue(double[] vec) {
         if (!arrays.sorted(vec)) {
             arrays.selectionSort(vec);
         }
@@ -69,14 +74,11 @@ public class SimpleDataSeriesStatistics extends Statistics {
         return vec[index];
     }
 
-    double standardDeviation(double[] vec) {
-        double var = variance(vec);
-        return Math.sqrt(var);
+    double setStandardDeviation(double variance) {
+        return Math.sqrt(variance);
     }
 
-    double variationCoeficient(double[] vec) {
-        double sd = standardDeviation(vec);
-        double avg = mean(vec);
-        return sd / avg;
+    double setVariationCoeficient(double standardDeviation, double mean) {
+        return standardDeviation / mean;
     }
 }
