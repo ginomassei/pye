@@ -5,14 +5,14 @@ import java.lang.reflect.Array;
 public class ListFrequences extends GroupDataStatistics {
 
     // Atributes.
-    double[] absoluteFrequency;
-    double[] relativeFrequency;
-    double variance;
-    double mean;
-    double median;
-    double modalValue;
-    double standardDeviation;
-    double variationCoeficient;
+    private double[] absoluteFrequency;
+    private double[] relativeFrequency;
+    private double variance;
+    private double mean;
+    private double median;
+    private double modalValue;
+    private double standardDeviation;
+    private double variationCoeficient;
 
     // Construct.
     ListFrequences(double[] data, double[] variables) {
@@ -27,7 +27,8 @@ public class ListFrequences extends GroupDataStatistics {
     }
 
     // Methods.
-    double setMean(double[] arr) {
+    // Setters.
+    protected double setMean(double[] arr) {
         // Returns the mean value of a given data series based on the relative frequencies.
         int meanValue = 0;
         int n = Array.getLength(arr);
@@ -38,15 +39,15 @@ public class ListFrequences extends GroupDataStatistics {
         return meanValue;
     }
 
-    double setMedian(double[] arr) {
+    protected double setMedian(double[] arr) {
         return 0;
     }
 
-    double setModalValue(double[] arr) {
+    protected double setModalValue(double[] arr) {
         return 0;
     }
 
-    double[] setAbsoluteFrequency(double[] var, double[] data) {
+    private double[] setAbsoluteFrequency(double[] var, double[] data) {
         int n = Array.getLength(var);
         double[] ni = new double[n];
         int j = 0;
@@ -56,5 +57,30 @@ public class ListFrequences extends GroupDataStatistics {
             j++;
         }
         return ni;
+    }
+
+    // Getters.
+    double[] getAbsoluteFrequency() {
+        return absoluteFrequency;
+    }
+
+    double[] getRelativeFrequency() {
+        return relativeFrequency;
+    }
+
+    double getVariance() {
+        return variance;
+    }
+
+    double getMean() {
+        return mean;
+    }
+
+    double getMedian() {
+        return median;
+    }
+
+    double getModalValue() {
+        return modalValue;
     }
 }

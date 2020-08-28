@@ -23,7 +23,8 @@ public class SimpleDataSeriesStatistics extends Statistics {
     }
 
     // Methods.
-    double setMean(double[] vec) {
+    // Setters.
+    protected double setMean(double[] vec) {
         // Returns the mean value of a given data series array.
         double sum = 0;
         int n = Array.getLength(vec);
@@ -34,7 +35,7 @@ public class SimpleDataSeriesStatistics extends Statistics {
         return sum / n;
     }
 
-    double setMedian(double[] vec) {
+    protected double setMedian(double[] vec) {
         // Returns the median value of a data series array.
         int n = Array.getLength(vec);
         double medianEven;
@@ -54,7 +55,7 @@ public class SimpleDataSeriesStatistics extends Statistics {
         return medianEven;
     }
 
-    double setVariance(double[] vec) {
+    protected double setVariance(double[] vec) {
         // Returns the variance value of a data series array.
         int n = Array.getLength(vec);
         double sqDiff = 0;
@@ -65,7 +66,7 @@ public class SimpleDataSeriesStatistics extends Statistics {
         return sqDiff / (n - 1);
     }
 
-    double setModalValue(double[] vec) {
+    protected double setModalValue(double[] vec) {
         if (!arrays.sorted(vec)) {
             arrays.selectionSort(vec);
         }
@@ -74,11 +75,14 @@ public class SimpleDataSeriesStatistics extends Statistics {
         return vec[index];
     }
 
-    double setStandardDeviation(double variance) {
+    protected double setStandardDeviation(double variance) {
         return Math.sqrt(variance);
     }
 
-    double setVariationCoeficient(double standardDeviation, double mean) {
+    protected double setVariationCoeficient(double standardDeviation, double mean) {
         return standardDeviation / mean;
     }
+
+    // Getters.
+
 }

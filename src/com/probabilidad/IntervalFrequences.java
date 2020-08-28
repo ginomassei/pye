@@ -5,18 +5,18 @@ import java.lang.reflect.Array;
 public class IntervalFrequences extends GroupDataStatistics {
 
     // Atributes.
-    double[] intervalsBottom;
-    double[] intervalsTop;
-    double[] classMarks;
-    double[] absoluteFrequency;
-    double[] relativeFrequency;
-    double[] classNumber;
-    double variance;
-    double mean;
-    double median;
-    double modalValue;
-    double standardDeviation;
-    double variationCoeficient;
+    private double[] intervalsBottom;
+    private double[] intervalsTop;
+    private double[] classMarks;
+    private double[] absoluteFrequency;
+    private double[] relativeFrequency;
+    private double[] classNumber;
+    private double variance;
+    private double mean;
+    private double median;
+    private double modalValue;
+    private double standardDeviation;
+    private double variationCoeficient;
 
     // Construct.
     IntervalFrequences(double[] data, int intervalNumber) {
@@ -36,26 +36,27 @@ public class IntervalFrequences extends GroupDataStatistics {
     }
 
     // Methods.
-    double setMean(double[] arr) {
+    // Setters.
+    protected double setMean(double[] arr) {
         // Returns the mean value of a given data series based on the class marks.
         int meanValue = 0;
         int n = Array.getLength(arr);
 
         for (int i = 0; i < n; i++) {
-            meanValue += arr[i] * hi[i];
+            meanValue += arr[i] * classMarks[i];
         }
         return meanValue;
     }
 
-    double setMedian(double[] vec) {
+    protected double setMedian(double[] vec) {
         return 0;
     }
 
-    double setModalValue(double[] arr) {
+    protected double setModalValue(double[] arr) {
         return 0;
     }
 
-    Object[] setIntervals(double[] yi, int intervalsNumber) {
+    private Object[] setIntervals(double[] yi, int intervalsNumber) {
         int n = Array.getLength(yi);
         double lower = yi[0];
         double higher = yi[n - 1];
@@ -88,7 +89,7 @@ public class IntervalFrequences extends GroupDataStatistics {
         return new Object[]{intervalsBottom, intervalsTop, classes};
     }
 
-    double[] setClassMarks(double[] intervalsTop, double[] intervalsBottom) {
+    private double[] setClassMarks(double[] intervalsTop, double[] intervalsBottom) {
         int n = Array.getLength(intervalsBottom);
         double[] classMark = new double[n];  // Marcas de clase.
 
@@ -98,7 +99,7 @@ public class IntervalFrequences extends GroupDataStatistics {
         return classMark;
     }
 
-    double[] setAbsoluteFrequency(double[] intervalsBottom, double[] intervalsTop, double[] obs) {
+    private double[] setAbsoluteFrequency(double[] intervalsBottom, double[] intervalsTop, double[] obs) {
         double[] ni = new double[Array.getLength(intervalsBottom)];
 
         for (int i = 0; i < Array.getLength(ni); i++) {
@@ -110,4 +111,6 @@ public class IntervalFrequences extends GroupDataStatistics {
         }
         return ni;
     }
+
+    // Getters.
 }

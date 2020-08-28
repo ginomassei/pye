@@ -41,10 +41,10 @@ abstract class Statistics {
     }
 
     // Abstract methods definitions.
-    abstract double setMean(double[] arr);
-    abstract double setMedian(double[] arr);
-    abstract double setVariance(double[] arr);
-    abstract double setModalValue(double[] arr);
-    abstract double setStandardDeviation(double variance);
-    abstract double setVariationCoeficient(double standardDeviation, double mean);
+    protected abstract double setMean(double[] arr);
+    protected abstract double setMedian(double[] arr);
+    protected abstract double setVariance(double[] arr);
+    protected abstract double setModalValue(double[] arr);
+    protected abstract double setStandardDeviation(double variance);
+    protected abstract double setVariationCoeficient(double standardDeviation, double mean);
 }

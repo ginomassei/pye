@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="Added atributes to all classes.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/GroupDataStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/GroupDataStatistics.java" afterDir="false" />
+    <list default="true" id="c6f6e261-21a8-49c7-b26a-e8a2e1acb28b" name="Default Changelist" comment="Constructors added">
       <change beforePath="$PROJECT_DIR$/src/com/probabilidad/IntervalFrequences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/IntervalFrequences.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/probabilidad/ListFrequences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/ListFrequences.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/probabilidad/SimpleDataSeriesStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/SimpleDataSeriesStatistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/probabilidad/Statistics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598578815206</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Constructors added">
+      <created>1598621868890</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598621868890</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -239,7 +229,8 @@
     <MESSAGE value="Implemented modal value method." />
     <MESSAGE value="Overall refactor." />
     <MESSAGE value="Added atributes to all classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added atributes to all classes." />
+    <MESSAGE value="Constructors added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Constructors added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1646" y="562" key="#Notifications" timestamp="1598571516464">
@@ -313,11 +304,11 @@
     </state>
     <state x="497" y="231" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1598533424036" />
     <state x="781" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1598489033914" />
-    <state x="880" y="460" key="Vcs.Push.Dialog.v2" timestamp="1598578819374">
+    <state x="880" y="460" key="Vcs.Push.Dialog.v2" timestamp="1598621871793">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="578" y="335" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1598542240156" />
-    <state x="880" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598578819374" />
+    <state x="880" y="460" key="Vcs.Push.Dialog.v2/0.0.2560.1440@0.0.2560.1440" timestamp="1598621871793" />
     <state x="880" y="476" key="Vcs.Push.Dialog.v2/0.23.2560.1417@0.23.2560.1417" timestamp="1598577687896" />
     <state x="381" y="268" width="918" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598534005975">
       <screen x="0" y="0" width="1680" height="1050" />
