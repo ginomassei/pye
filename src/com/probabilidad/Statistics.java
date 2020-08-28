@@ -25,16 +25,16 @@ abstract class Statistics {
         return hi;
     }
 
-    double[] cumulativeFrequency(double[] vec) {
+    double[] cumulativeFrequency(double[] arr) {
         // Returns the cumulative frequency of a given array.
-        int n = Array.getLength(vec);
+        int n = Array.getLength(arr);
         double[] cf = new double[n];
 
         for (int i = 0; i < n; i++) {
             if (i == 0){
-                cf[i] = vec[i] + cf[i];
+                cf[i] = arr[i] + cf[i];
             } else {
-                cf[i] = vec[i] + cf[i - 1];
+                cf[i] = arr[i] + cf[i - 1];
             }
         }
         return cf;
@@ -43,8 +43,8 @@ abstract class Statistics {
     // Abstract methods definitions.
     abstract double mean(double[] arr);
     abstract double median(double[] arr);
-    abstract double variance(double[] vec);
-    abstract double modalValue(double[] vec);
-    abstract double standardDeviation(double[] vec);
-    abstract double variationCoeficient(double[] vec);
+    abstract double variance(double[] arr);
+    abstract double modalValue(double[] arr);
+    abstract double standardDeviation(double[] arr);
+    abstract double variationCoeficient(double[] arr);
 }

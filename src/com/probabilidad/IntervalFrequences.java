@@ -3,6 +3,24 @@ package com.probabilidad;
 import java.lang.reflect.Array;
 
 public class IntervalFrequences extends GroupDataStatistics {
+
+    // Atributes.
+    double[] data;
+    double[] intervalsBottom;
+    double[] intervalsTop;
+    double[] classMarks;
+    double[] absoluteFrequency;
+    double[] relativeFrequency;
+    double[] classes;
+    double variance;
+    double mean;
+    double median;
+    double modalValue;
+    double standardDeviation;
+    double variationCoeficient;
+
+
+    // Methods.
     double mean(double[] arr) {
         // Returns the mean value of a given data series based on the class marks.
         int meanValue = 0;
@@ -15,6 +33,10 @@ public class IntervalFrequences extends GroupDataStatistics {
     }
 
     double median(double[] vec) {
+        return 0;
+    }
+
+    double modalValue(double[] arr) {
         return 0;
     }
 
@@ -51,7 +73,7 @@ public class IntervalFrequences extends GroupDataStatistics {
         return new Object[]{intervalsBottom, intervalsTop, classes};
     }
 
-    double[] classMarks(double[] intervalsTop, double[] intervalsBottom) {
+    double[] getClassMarks(double[] intervalsTop, double[] intervalsBottom) {
         int n = Array.getLength(intervalsBottom);
         double[] classMark = new double[n];  // Marcas de clase.
 
@@ -61,7 +83,7 @@ public class IntervalFrequences extends GroupDataStatistics {
         return classMark;
     }
 
-    double[] absoluteFrequency(double[] intervalsBottom, double[] intervalsTop, double[] obs) {
+    double[] getAbsoluteFrequency(double[] intervalsBottom, double[] intervalsTop, double[] obs) {
         double[] ni = new double[Array.getLength(intervalsBottom)];
 
         for (int i = 0; i < Array.getLength(ni); i++) {

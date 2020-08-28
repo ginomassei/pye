@@ -3,6 +3,19 @@ package com.probabilidad;
 import java.lang.reflect.Array;
 
 public class SimpleDataSeriesStatistics extends Statistics {
+
+    // Atributes.
+    double[] data;
+    double[] absoluteFrequency;
+    double[] relativeFrequency;
+    double variance;
+    double mean;
+    double median;
+    double modalValue;
+    double standardDeviation;
+    double variationCoeficient;
+
+    // Methods.
     double mean(double[] vec) {
         // Returns the mean value of a given data series array.
         double sum = 0;
